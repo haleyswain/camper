@@ -5,6 +5,8 @@
   margin: 0 auto;
   padding: 2rem;
   font-weight: normal;
+  position: absolute;
+  top: 0px;
 }
 
 a,
@@ -25,11 +27,17 @@ a,
   body {
     display: flex;
     place-items: center;
+    background-image: url("./yosemite-1.jpg");
+    background-size: cover;     /* Ensures the image covers the entire area */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
   }
 
   #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     padding: 0 2rem;
+    flex-direction: column;
   }
 }
