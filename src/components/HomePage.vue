@@ -8,9 +8,10 @@ defineProps({})
 
 <style scoped>
 h1 {
-  font-weight: 500;
-  font-size: 2.6rem;
+  font-weight: 600;
+  font-size: 3.0rem;
   top: -10px;
+  color: white;
 }
 
 </style>
