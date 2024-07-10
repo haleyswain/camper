@@ -5,6 +5,8 @@
   margin: 0 auto;
   padding: 2rem;
   font-weight: normal;
+  position: absolute;
+  top: 0px;
 }
 
 a,
@@ -28,8 +30,8 @@ a,
   }
 
   #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     padding: 0 2rem;
+    flex-direction: column;
   }
 }
