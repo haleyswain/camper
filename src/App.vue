@@ -6,7 +6,7 @@
     <div class="wrapper">
       <nav class="sticky-nav">
         <RouterLink to="/" class="nav-button">Home</RouterLink>
-        <RouterLink to="/explore-parks" class="nav-button">Explore Parks</RouterLink>
+        <RouterLink to="/explore-parks-by-state" class="nav-button">Explore Parks By State</RouterLink>
       </nav>
     </div>
   </header>

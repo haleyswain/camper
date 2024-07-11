@@ -8,6 +8,7 @@ import router from './router'
 
 const app = createApp(App)
 
+// initializes the pinia store
 app.use(createPinia())
 app.use(router)
 
