@@ -15,7 +15,7 @@
   <RouterView />
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 header {
   line-height: 1.5;
   max-height: 100vh;
@@ -29,6 +29,10 @@ header {
   justify-content: center; /* Centers the buttons horizontally */
   gap: 10px; /* Adds space between the buttons */
   z-index: 1000; /* Ensures the nav is above other elements */
+  @media (max-width: 500px) {
+    flex-direction: column;
+    align-content:center;
+  }
 }
 
 .nav-button {

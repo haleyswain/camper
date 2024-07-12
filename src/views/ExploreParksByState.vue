@@ -1,7 +1,8 @@
 <template>
   <div class="explore">
-    <h1>Parks in {{ selectedState }}</h1>
+    <h1 class="explore__header">Parks in {{ selectedState }}</h1>
     <SelectElement
+      class="explore__select"
       :items="states"
       labelField="name"
       valueField="abbreviation"
@@ -76,6 +77,14 @@ const filterParksByState = (state) => parks.value.filter((park) => park.states.i
   flex-direction: column;
   margin: auto;
   background-color:black;
+  border-radius: 30px;
+  align-items: center;
+  &__header {
+    padding:10px;
+  }
+  &__select {
+    padding: 10px;
+  }
   &__loading {
     color: white;
     font-weight: 400;
