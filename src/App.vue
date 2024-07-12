@@ -7,6 +7,7 @@
       <nav class="sticky-nav">
         <RouterLink to="/" class="nav-button">Home</RouterLink>
         <RouterLink to="/explore-parks-by-state" class="nav-button">Explore Parks By State</RouterLink>
+        <RouterLink to="/passport-stamp" class="nav-button">Where can I stamp my passport?</RouterLink>
       </nav>
     </div>
   </header>
@@ -22,9 +23,6 @@ header {
 
 /* Sticky navigation bar styling */
 .sticky-nav {
-  position: -webkit-sticky; /* For Safari */
-  position: sticky;
-  top: 0;
   background-color: #333;
   padding: 10px;
   display: flex;
@@ -52,6 +50,7 @@ header {
     display: flex;
     place-items: flex-start;
     flex-wrap: wrap;
+    margin: auto;
   }
 }
 </style>
