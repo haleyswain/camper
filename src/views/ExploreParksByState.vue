@@ -17,6 +17,9 @@
         <a :href="park.url">{{ park.fullName }}</a>
       </li>
     </ul>
+    <div v-if="error" class="explore__error">
+      Error loading parks: {{ error }}
+    </div>
   </div>
 </template>
 
@@ -31,12 +34,19 @@ import states from '../data/states.js';
 // initialize reactive properties
 const parks = ref([]);
 const loading = ref(false);
+const error = ref(null);
 
 // make api call
 const loadParks = async () => {
   loading.value = true;
-  parks.value = await exploreParks();
-  loading.value = false;
+  error.value = null; // Reset error state
+  try {
+    parks.value = await exploreParks();
+  } catch (err) {
+    error.value = err.message || 'Failed to load parks';
+  } finally {
+    loading.value = false;
+  }
 };
 
 const stateStore = useStateStore();
@@ -69,6 +79,10 @@ const filterParksByState = (state) => parks.value.filter((park) => park.states.i
   &__loading {
     color: white;
     font-weight: 400;
+  }
+  &__error {
+    color: white;
+    font-size: 24px;
   }
 }
 </style>
